@@ -23,6 +23,3 @@ A boilerplate project to develop applications with **React**, configured with **
    ```bash
    git clone https://github.com/your-username/react-starter-kit.git
    cd react-starter-kit
-2. Install
-  ```bash
-  npm install
