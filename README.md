@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+# React Starter Kit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A boilerplate project to develop applications with **React**, configured with **Vite**, **TypeScript**, and modern development tools.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 18** and **TypeScript** setup.
+- Fast and modern bundler: **Vite**.
+- Pre-configured with **ESLint**, **Prettier**, and **Husky**.
+- Testing setup with **Jest** and **Testing Library**.
+- Optimized scripts for development, building, and code quality checks.
 
-## Expanding the ESLint configuration
+## 📦 Main Dependencies
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- `react` ^18.3.1
+- `react-dom` ^18.3.1
+- `vite` ^6.0.1
+- `typescript` ~5.6.2
 
-- Configure the top-level `parserOptions` property like this:
+## 🔧 Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clone this repository:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+   ```bash
+   git clone https://github.com/your-username/react-starter-kit.git
+   cd react-starter-kit
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. Install dependencies `$ npm i `
+3. Finally, run `$ npm start` to lauch the SPA.
