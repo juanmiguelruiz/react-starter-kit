@@ -25,6 +25,7 @@ const commonRules = {
   '@typescript-eslint/no-explicit-any': 'error',
   '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
   '@typescript-eslint/no-non-null-assertion': 'error',
+  '@typescript-eslint/explicit-function-return-type': 'error',
 
   // React
   'react/react-in-jsx-scope': 'off',
@@ -41,8 +42,8 @@ const commonRules = {
     {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
       'newlines-between': 'never',
-      alphabetize: { order: 'asc' }
-    }
+      alphabetize: { order: 'asc' },
+    },
   ],
 
   // General
@@ -58,20 +59,20 @@ export default [
     ignores: ['node_modules/**', 'dist/**', 'build/**', 'coverage/**'],
     plugins: {
       '@typescript-eslint': tseslint,
-      'react': reactPlugin,
+      react: reactPlugin,
       'react-hooks': reactHooksPlugin,
-      'import': importPlugin,
-      'prettier': prettierPlugin
+      import: importPlugin,
+      prettier: prettierPlugin,
     },
     settings: {
       react: { version: 'detect' },
       'import/resolver': {
-        typescript: { alwaysTryTypes: true }
-      }
+        typescript: { alwaysTryTypes: true },
+      },
     },
     rules: {
       ...commonRules,
-      ...prettierConfig.rules
+      ...prettierConfig.rules,
     },
   },
   {
@@ -80,7 +81,7 @@ export default [
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
-      'import/no-extraneous-dependencies': 'off'
-    }
+      'import/no-extraneous-dependencies': 'off',
+    },
   },
 ];

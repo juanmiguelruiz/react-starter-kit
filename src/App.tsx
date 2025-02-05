@@ -1,6 +1,6 @@
 import './App.css';
 
-function App() {
+function App(): JSX.Element {
   return (
     <>
       <h1>React Starter Kit</h1>
